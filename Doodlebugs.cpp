@@ -5,6 +5,19 @@
  *********************************************************************/
 
 //"Doodlebugs.hpp" is the Doodlebugs class header file
-#include "Doodlebugs.hpp"
+#include<iostream>
+#include<cmath>
+#include<string>
+#include<limits>
+#include<iomanip>
+#include<stdlib.h>
+#include <vector>
+#include"runMenu.hpp"
+#include"utilities.hpp"
 
-Doodlebugs::
+#include "Doodlebugs.hpp"
+#include "Critter.hpp"
+
+Doodlebugs::Doodlebugs():Critter(){
+
+}

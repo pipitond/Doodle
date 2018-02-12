@@ -5,6 +5,21 @@
  *********************************************************************/
 
 //"Ant.hpp" is the Ant class implementation file
-#include "Ant.hpp"
+#include<iostream>
+#include<cmath>
+#include<string>
+#include<limits>
+#include<iomanip>
+#include<stdlib.h>
+#include <vector>
+#include"runMenu.hpp"
+#include"utilities.hpp"
 
-Ant::
+#include "Ant.hpp"
+#include "Critter.hpp"
+
+
+
+Ant::Ant():Critter(){
+
+}

@@ -11,7 +11,7 @@
 using namespace std;
 
 
-runMenu(){
+void runMenu(){
   int numSpace = 16;
 
 

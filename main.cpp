@@ -13,18 +13,18 @@
  #include <vector>
  #include"Ant.hpp"
  #include"Critter.hpp"
- #include"Doddlebugs.hpp"
+ #include"Doodlebugs.hpp"
  #include"runMenu.hpp"
  #include"utilities.hpp"
 
 using namespace std;
 
 
-int main {
+int main(){
 
 runMenu();
 
 
 
-
+return 0;
 }

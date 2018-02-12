@@ -9,7 +9,12 @@
 #define CRITTER_HPP
 
 class Critter {
-    
-}
+
+protected:
+
+public:
+  Critter();
+
+};
 
 #endif /* Critter_hpp */

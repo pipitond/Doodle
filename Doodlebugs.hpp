@@ -7,9 +7,14 @@
 //include guards
 #ifndef DOODLEBUGS_HPP
 #define DOODLEBUGS_HPP
+#include "Critter.hpp"
 
 class Doodlebugs : public Critter {
-    
+
+protected:
+
+public:
+  Doodlebugs();
 };
 
 #endif /* Doodlebugs_hpp */
