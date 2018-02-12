@@ -15,5 +15,11 @@ Ant.o: Ant.cpp Ant.hpp
 Doodlebugs.o: Doodlebugs.cpp Doodlebugs.hpp
 	g++ ${CXXFLAGS} -c Doodlebugs.cpp
 
+runMenu.o: runMenu.cpp runMenu.hpp
+		g++ ${CXXFLAGS} -c runMenu.cpp
+
+utilities.o: utilities.cpp utilities.hpp
+			g++ ${CXXFLAGS} -c utilities.cpp
+
 clean:
 	rm *.o game
