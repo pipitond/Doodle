@@ -15,5 +15,5 @@ int setDisplayWidth();
 std::string getFullString();
 void generateHorizontalBorder();
 void generateVerticalBorder(int numOfBorders);
-void pressEnterToReturn();
+void pressEnterToContinue();
 #endif

@@ -205,7 +205,7 @@ string getFullString(){
   return newString;
 }
 
-void pressEnterToReturn(){
-  cout << border << setw(setWidthRange-1) << left << " Press [ENTER] To Return To Menu" << border;
+void pressEnterToContinue(){
+  cout << border << setw(setWidthRange-1) << left << " Press [ENTER] to continue" << border;
   clearAndIgnore();
 }

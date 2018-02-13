@@ -1,7 +1,7 @@
 CXXFLAGS = -std=c++0x
 
-game: main.o Critter.o Ant.o Doodlebugs.o runMenu.o utilities.o
-	g++ ${CXXFLAGS} main.o Critter.o Ant.o Doodlebugs.o runMenu.o utilities.o -o game
+game: main.o Critter.o Ant.o Doodlebugs.o runSim.o utilities.o
+	g++ ${CXXFLAGS} main.o Critter.o Ant.o Doodlebugs.o runSim.o utilities.o -o game
 
 main.o: main.cpp
 	g++ ${CXXFLAGS} -c main.cpp
@@ -15,8 +15,8 @@ Ant.o: Ant.cpp Ant.hpp
 Doodlebugs.o: Doodlebugs.cpp Doodlebugs.hpp
 	g++ ${CXXFLAGS} -c Doodlebugs.cpp
 
-runMenu.o: runMenu.cpp runMenu.hpp
-		g++ ${CXXFLAGS} -c runMenu.cpp
+runSim.o: runSim.cpp runSim.hpp
+		g++ ${CXXFLAGS} -c runSim.cpp
 
 utilities.o: utilities.cpp utilities.hpp
 			g++ ${CXXFLAGS} -c utilities.cpp

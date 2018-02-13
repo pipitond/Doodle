@@ -14,7 +14,7 @@
  #include"Ant.hpp"
  #include"Critter.hpp"
  #include"Doodlebugs.hpp"
- #include"runMenu.hpp"
+ #include"runSim.hpp"
  #include"utilities.hpp"
 
 using namespace std;
@@ -22,7 +22,11 @@ using namespace std;
 
 int main(){
 
-runMenu();
+runStartScreen();
+generateBoard();
+printBoard();
+
+
 
 
 
