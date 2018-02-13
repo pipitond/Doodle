@@ -11,10 +11,10 @@
 class Critter {
 
 protected:
-
+  std::string critterType;
 public:
   Critter();
-
+  std::string getName();
 };
 
 #endif /* Critter_hpp */

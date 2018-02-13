@@ -5,13 +5,17 @@
 #include<iomanip>
 #include<stdlib.h>
 #include <vector>
+#include"Ant.hpp"
+#include"Critter.hpp"
+#include"Doodlebugs.hpp"
+#include"runSim.hpp"
 #include"utilities.hpp"
 
 using namespace std;
 
-int numOfRows = 22;
-int numOfColumns = 22;
-char board[22][22];
+int numOfRows = 20;
+int numOfColumns = 20;
+std::vector<Critter*> board;
 
 //Create begining menu screen
 void runStartScreen(){
@@ -28,27 +32,24 @@ void runStartScreen(){
 
 //Generate Board with borders
 void generateBoard(){
-  for(int i = 0; i < numOfRows; i++) {
-    for(int j = 0; j < numOfColumns; j++) {
-      if(i == 0 || i == (numOfRows - 1)) {
-        board[i][j] = '-';
-      } else if (j == 0 || j == (numOfColumns - 1)) {
-        board[i][j] = '|';
-      } else {
-        board[i][j]= ' ';
+  for(int i=0; i < numOfRows; i++){
+      for(int j=0; j< numOfColumns; j++){
+      Critter *pointer = new Critter;
+      board.push_back(pointer);
       }
-    }
   }
 }
 
+
+//Randomly Assigns critters
 void assignCritters(){
   int numOfCritters = 105;
     //Assign ants
     while(numOfCritters>100){
       int x = randomNumberGenerator(1,21);
       int y = randomNumberGenerator(1,21);
-      if(board[y][x] == ' '){
-          board[y][x] = 'O';
+      if(board[y][x].getName() == "Hello"){
+          //board[y][x] = new Doodlebugs;
           numOfCritters --;
         }
     }
@@ -56,17 +57,18 @@ void assignCritters(){
     while(numOfCritters>0){
       int x = randomNumberGenerator(1,21);
       int y = randomNumberGenerator(1,21);
-      if(board[y][x] == ' '){
-          board[y][x] = 'X';
+      if(board[y][x].getName() == "Hello"){
+          //board[y][x] = new Ant;
           numOfCritters --;
         }
     }
 }
 
+
 void printBoard(){
   for(int i=0; i < numOfRows; i++){
       for(int j=0; j< numOfColumns; j++){
-      cout << board[i][j];
+        cout << board[1][1].getName();
       }
       cout << endl;
   }
