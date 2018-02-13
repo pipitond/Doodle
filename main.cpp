@@ -25,7 +25,10 @@ srand(time(0));
 runStartScreen();
 generateBoard();
 assignCritters();
+cout << "critters assigned" << endl;
+
 printBoard();
+cout << "printBoard";
 
 
 

@@ -17,7 +17,7 @@
 #include "Critter.hpp"
 
 Critter::Critter(){
-  critterType = "Hello";
+  critterType = "X";
 }
 
 std::string Critter::getName(){
