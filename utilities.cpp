@@ -98,7 +98,6 @@ int checkValidPositiveNumber(){
   }
   return numberInputted;
 }
-
 double doubleCheckValidPositiveNumber(){
   double numberInputted;
   bool validInput = false;

@@ -4,5 +4,6 @@
 
 void runStartScreen();
 void generateBoard();
+void assignCritters();
 void printBoard();
 #endif
