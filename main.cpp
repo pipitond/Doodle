@@ -22,13 +22,21 @@ using namespace std;
 
 int main(){
 srand(time(0));
-runStartScreen();
-generateBoard();
-assignCritters();
-cout << "critters assigned" << endl;
 
+
+runStartScreen();
+getNumberOfSteps();
+assignCritters();
 printBoard();
-cout << "printBoard";
+
+while(nextStep()){
+  cout << "Hello" << endl;
+}
+
+cout << setw(setDisplayWidth()) << left << "| Would you like to simulate again?" << "|" << endl; 
+if(checkYesNoResponse()){
+  main();
+}
 
 
 

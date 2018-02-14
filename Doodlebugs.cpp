@@ -18,5 +18,5 @@
 #include "Critter.hpp"
 
 Doodlebugs::Doodlebugs():Critter(){
-
+    critterType = "X";
 }

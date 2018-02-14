@@ -15,6 +15,9 @@ protected:
 public:
   Critter();
   std::string getName();
+  virtual int makeMove(){
+    return 0;
+  };
 };
 
 #endif /* Critter_hpp */

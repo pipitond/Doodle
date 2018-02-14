@@ -3,7 +3,9 @@
 
 
 void runStartScreen();
-void generateBoard();
+void getNumberOfSteps();
 void assignCritters();
 void printBoard();
+void makeCrittersMove();
+bool nextStep();
 #endif

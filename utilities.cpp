@@ -18,7 +18,7 @@ using namespace std;
 
 //A menu number check to determine wether input was valid for the menu
 int setWidthRange = 50;
-char border = '|';
+ char border = '|';
 
 int setDisplayWidth(){
   return setWidthRange;
@@ -153,7 +153,7 @@ bool checkYesNoResponse(){
   //cout << setw(setWidthRange) << left <<"* Would you like to play again? " << setw(7) << left <<"*"<<  endl;
   while (!validRestartResponce){
       cout << border << setw(setWidthRange-1) << left <<" y/n " << setw(33) << left <<"|"<<  endl;
-      cout << border;
+      cout << border << ' ';
       cin >> restartResponce;
 
       if(restartResponce == 'y' || restartResponce == 'Y'){
@@ -161,10 +161,11 @@ bool checkYesNoResponse(){
         clearAndIgnore();
         return true;
       }else if(restartResponce == 'n' || restartResponce == 'N'){
-        cout << border << setw(setWidthRange-1) << left << border << endl;//39
-        //cout << "* Game Exiting... " << setw(21) << left <<"*"<< endl;// 18 + 23
-        //cout << "* Goodbye world " << setw(23) << left <<"*"<< endl;// 18 + 23
+        generateVerticalBorder(1);
+        cout << border << setw(setWidthRange-1) << left << " Game Exiting..." << left << border << endl;// 39
+        cout << border << setw(setWidthRange-1) << left << " Goodbye World" << left << border << endl;// 39
         clearAndIgnore();
+        generateHorizontalBorder();
         return false;
       }else{
           clearAndIgnore();

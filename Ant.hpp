@@ -15,7 +15,7 @@ protected:
 
 public:
   Ant();
-
+  int makeMove();
 };
 
 #endif /* Ant_hpp */

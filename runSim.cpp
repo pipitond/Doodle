@@ -15,6 +15,8 @@ using namespace std;
 
 int numOfRows = 20;
 int numOfColumns = 20;
+int numOfSteps;
+int timeStep = 0;
 Critter *board[20][20];
 
 //Create begining menu screen
@@ -30,18 +32,12 @@ void runStartScreen(){
   generateHorizontalBorder();
 }
 
-//Generate Board with borders
-void generateBoard(){/*
-      for(int i=0; i < numOfRows; i++){
-          for(int j=0; j< numOfColumns; j++){
-          Critter *pointer = new Critter;
-          board[i][j] = pointer;
-          cout << board[i][j]->getName();
-          }
-          cout << endl;
-      }
-*/}
 
+void getNumberOfSteps(){
+    cout << setw(setDisplayWidth()) << left << "| Enter the number of steps:" << "|" <<  endl;
+    numOfSteps = checkValidPositiveNumber();
+    generateHorizontalBorder();
+}
 
 
 
@@ -50,19 +46,15 @@ void assignCritters(){
   int numOfCritters = 400;
     //Assign ants
     while(numOfCritters>395){
-      cout << "1" << endl;
       int x = randomNumberGenerator(0,20);
       int y = randomNumberGenerator(0,20);
       if( board[y][x] == NULL){
-          cout << "assigns" << endl;
           board[y][x] = new Doodlebugs;
-          cout << board[y][x]->getName();
           numOfCritters --;
         }
     }
 
     while(numOfCritters>295){
-      cout << "2" << endl;
       int x = randomNumberGenerator(0,20);
       int y = randomNumberGenerator(0,20);
       if(board[y][x] == NULL){
@@ -75,17 +67,29 @@ void assignCritters(){
 
 
 void printBoard(){
-cout << "----------------------" << endl;
-  for(int i=0; i < 20; i++){
-    cout << "|";
-      for(int j=0; j< 20; j++){
-        if(board[i][j] != NULL ){
-            cout << board[i][j]->getName();
-        }else if(board[i][j] == NULL ){
-            cout << ' ';
-        }
-      }
-      cout << "|" <<  endl;
-  }
   cout << "----------------------" << endl;
+    for(int i=0; i < 20; i++){
+      cout << "|";
+        for(int j=0; j< 20; j++){
+          if(board[i][j] != NULL ){
+              cout << board[i][j]->getName();
+          }else if(board[i][j] == NULL ){
+              cout << ' ';
+          }
+        }
+        cout << "|" <<  endl;
+    }
+  cout << "----------------------" << endl;
+}
+
+bool nextStep(){
+    if(timeStep!=numOfSteps){
+      //run the next step, increment make move for critters,
+      //breed if needed
+      //starve if needed
+      timeStep++;
+      return true;
+    }else{
+      return false;
+    }
 }

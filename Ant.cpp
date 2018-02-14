@@ -21,5 +21,11 @@
 
 
 Ant::Ant():Critter(){
+  critterType = "O";
+}
 
+
+int Ant::makeMove(){
+    int moveType = randomNumberGenerator(1,4);
+    return moveType;
 }
