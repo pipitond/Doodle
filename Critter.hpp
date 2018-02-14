@@ -12,12 +12,15 @@ class Critter {
 
 protected:
   std::string critterType;
+  int stepsAlive;
 public:
   Critter();
   std::string getName();
   virtual int makeMove(){
     return 0;
   };
-};
 
-#endif /* Critter_hpp */
+  void addStep();
+  int getStep();
+};
+  #endif /* Critter_hpp */

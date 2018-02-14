@@ -8,4 +8,5 @@ void assignCritters();
 void printBoard();
 void makeCrittersMove();
 bool nextStep();
+void increaseStepsAlive();
 #endif

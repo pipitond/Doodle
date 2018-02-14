@@ -17,8 +17,17 @@
 #include "Critter.hpp"
 
 Critter::Critter(){
+  stepsAlive = 0;
 }
 
 std::string Critter::getName(){
   return critterType;
+}
+
+void Critter::addStep(){
+  stepsAlive ++;
+}
+
+int Critter::getStep(){
+  return stepsAlive;
 }

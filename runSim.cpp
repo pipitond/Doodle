@@ -82,9 +82,11 @@ void printBoard(){
   cout << "----------------------" << endl;
 }
 
+
 bool nextStep(){
     if(timeStep!=numOfSteps){
       //run the next step, increment make move for critters,
+      increaseStepsAlive();
       //breed if needed
       //starve if needed
       timeStep++;
@@ -93,3 +95,22 @@ bool nextStep(){
       return false;
     }
 }
+
+
+/*
+void makeNewBug(){
+  if( board[y][x] == NULL){
+      board[y][x] = new Doodlebugs;
+      numOfCritters --;
+    }
+}*/
+
+void increaseStepsAlive(){
+    for(int i=0; i < 20; i++){
+        for(int j=0; j< 20; j++){
+          if(board[i][j] != NULL ){
+              board[i][j]->addStep();
+          }
+        }
+    }
+  }

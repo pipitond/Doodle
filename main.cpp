@@ -28,12 +28,10 @@ runStartScreen();
 getNumberOfSteps();
 assignCritters();
 printBoard();
-
 while(nextStep()){
-  cout << "Hello" << endl;
+  printBoard();
 }
-
-cout << setw(setDisplayWidth()) << left << "| Would you like to simulate again?" << "|" << endl; 
+cout << setw(setDisplayWidth()) << left << "| Would you like to simulate again?" << "|" << endl;
 if(checkYesNoResponse()){
   main();
 }
