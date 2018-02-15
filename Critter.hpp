@@ -3,6 +3,7 @@
  ** Date: 02/18/2018
  ** File Description: "Critter.hpp" is the Critter class header file
  *********************************************************************/
+#include <string>
 
 //include guards
 #ifndef CRITTER_HPP
