@@ -21,6 +21,7 @@ public:
   };
 
   void addStep();
+  void resetStep();
   int getStep();
 };
   #endif /* Critter_hpp */
