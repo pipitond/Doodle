@@ -28,6 +28,10 @@ void Critter::addStep(){
   stepsAlive ++;
 }
 
+void Critter::resetStep(){
+    stepsAlive = 0;
+}
+
 int Critter::getStep(){
   return stepsAlive;
 }
