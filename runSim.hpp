@@ -9,4 +9,6 @@ void printBoard();
 void makeCrittersMove();
 bool nextStep();
 void increaseStepsAlive();
+void breedCritters();
+
 #endif
