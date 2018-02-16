@@ -114,3 +114,82 @@ void increaseStepsAlive(){
         }
     }
   }
+
+void breedCritters(){
+    for(int i=0; i < 20; i++){
+        for(int j=0; j< 20; j++){
+            if(board[i][j] != NULL ){
+                bool breedDone = false;
+                bool checkLeft = false, checkRight = false, checkUp = false, checkDown = false;
+                while (!breedDone && !(checkLeft && checkRight && checkUp && checkDown)) {
+                    int direction = randomNumberGenerator(1, 4);
+                    if (direction == 1) { //Left
+                        checkLeft = true;
+                        if (i > 0) { //Check left of bug
+                            if (board[i-1][j] == NULL) {
+                                breedDone = true;
+                                if ((board[i][j]->getName() == "O") && (board[i][j]->getStep() > 2)) {
+                                    board[i][j]->resetStep();
+                                    board[i-1][j] = new Ant;
+                                }
+                                else if ((board[i][j]->getName() == "X") && (board[i][j]->getStep() > 7)) {
+                                    board[i][j]->resetStep();
+                                    board[i-1][j] = new Doodlebugs;
+                                }
+                            }
+                        }
+                    }
+                    else if (direction == 2) { //Up
+                        checkUp = true;
+                        if (j > 0) { //Check above bug
+                            if (board[i][j-1] == NULL) {
+                                breedDone = true;
+                                if ((board[i][j]->getName() == "O") && (board[i][j]->getStep() > 2)) {
+                                    board[i][j]->resetStep();
+                                    board[i][j-1] = new Ant;
+                                }
+                                else if ((board[i][j]->getName() == "X") && (board[i][j]->getStep() > 7)) {
+                                    board[i][j]->resetStep();
+                                    board[i][j-1] = new Doodlebugs;
+                                }
+                            }
+                        }
+                    }
+                    else if (direction == 3) { //Right
+                        checkRight = true;
+                        if (i < 20) { //Check right of bug
+                            if (board[i+1][j] == NULL) {
+                                breedDone = true;
+                                if ((board[i][j]->getName() == "O") && (board[i][j]->getStep() > 2)) {
+                                    board[i][j]->resetStep();
+                                    board[i+1][j] = new Ant;
+                                }
+                                else if ((board[i][j]->getName() == "X") && (board[i][j]->getStep() > 7)) {
+                                    board[i][j]->resetStep();
+                                    board[i+1][j] = new Doodlebugs;
+                                }
+                            }
+                        }
+                    }
+                    else if (direction == 4) { //Down
+                        checkDown = true;
+                        if (j < 20) { //Check below bug
+                            if (board[i][j+1] == NULL) {
+                                breedDone = true;
+                                if ((board[i][j]->getName() == "O") && (board[i][j]->getStep() > 2)) {
+                                    board[i][j]->resetStep();
+                                    board[i][j+1] = new Ant;
+                                }
+                                else if ((board[i][j]->getName() == "X") && (board[i][j]->getStep() > 7)) {
+                                    board[i][j]->resetStep();
+                                    board[i][j+1] = new Doodlebugs;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
